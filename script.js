@@ -433,13 +433,10 @@ startGameButton.addEventListener("click", () => {
   ];
 
 
-
-
   var selectedGameIndex = flkty.selectedIndex;
   var newGameUrl = gameUrlList[selectedGameIndex];
-  
 
-  const newWindow = window.open(newGameUrl, "_blank", "width=800,height=600" );
+  const newWindow = window.open("", "_blank", "width=800,height=600");
 
   if (newWindow) {
     newWindow.document.write(`
@@ -453,6 +450,8 @@ startGameButton.addEventListener("click", () => {
   } else {
     alert("Pop-up blocked. Please allow pop-ups for this site.");
   }
+
+
 });
 
     //change things when the user clicks on a different game
