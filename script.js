@@ -489,8 +489,8 @@ startGameButton.addEventListener("click", () => {
     var game_name_options = [
       "Tekken 3",
       "Marvel vs Capcom - COSH",
-      "Star Wars Jedi: Fallen Order",
-      "Horizon Zero Dawn",
+      "Street Fighter II -SPECIAL",
+      "JoJo's Bizarre Adventure: HFTF",
       "Death Stranding",
       "Marvel's Spider-Man",
       "Ghost of Tsushima",
