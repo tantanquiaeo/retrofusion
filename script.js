@@ -368,12 +368,12 @@ startGameButton.addEventListener("click", () => {
     "https://www.retrogames.cc/embed/8843-jojos-bizarre-adventure%3A-heritage-for-the-future-jojo-no-kimyou-na-bouken%3A-mirai-e-no-isan-japan-990927-no-cd.html",
     "https://www.retrogames.cc/embed/19537-dragonball-z-supersonic-warriors-e-rising-sun.html",
     "https://www.retrogames.cc/embed/16913-dragon-ball-z-buyuu-retsuden-japan.html",
-    "https://www.retrogames.cc/embed/40238-tekken-3.html",
-    "https://www.retrogames.cc/embed/9123-marvel-vs-capcom-clash-of-super-heroes-980123-usa.html",
-    "https://www.retrogames.cc/embed/40238-tekken-3.html",
-    "https://www.retrogames.cc/embed/9123-marvel-vs-capcom-clash-of-super-heroes-980123-usa.html",
-    "https://www.retrogames.cc/embed/40238-tekken-3.html",
-    "https://www.retrogames.cc/embed/9123-marvel-vs-capcom-clash-of-super-heroes-980123-usa.html",
+    "https://www.retrogames.cc/embed/10391-the-king-of-fighters-2002-super-bootleg-bootleg.html",
+    "https://www.retrogames.cc/embed/41687-crash-team-racing.html",
+    "https://www.retrogames.cc/embed/41623-bloody-roar-2-bringer-of-new-age.html",
+    "https://www.retrogames.cc/embed/16841-contra-usa.html",
+    "https://www.retrogames.cc/embed/42282-sonic-2-heroes.html",
+    "https://www.retrogames.cc/embed/32441-fifa-99-europe-en-fr-de-es-it-nl-pt-sv.html",
     
     // Add URLs for other games here
   ];
@@ -408,43 +408,43 @@ startGameButton.addEventListener("click", () => {
       "https://pbs.twimg.com/media/D5uhMxgWwAAow5n.jpg",
       "https://assets.altarofgaming.com/wp-content/uploads/2023/03/dragon-ball-z-supersonic-warriors-game-cover-altar-of-gaming.jpg",
       "https://freegametips.com/wp-content/uploads/2019/11/Dragon-Ball-Super-Butoden-2-vs-Buyu-Retsuden-25-years.jpg",
-      "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/tsus-bg.jpg",
-      "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/ass-bg.jpg",
-      "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/mgs5-bg.jpg",
-      "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/hit2-bg.jpg",
-      "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/rdr2-bg.jpg",
-      "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/sek-bg.jpg"
+      "https://wallpapercave.com/wp/wp8645269.png",
+      "https://picfiles.alphacoders.com/690/69042.jpg",
+      "https://i.ytimg.com/vi/cQU4ZVnR9oo/maxresdefault.jpg",
+      "https://cdn.wallpapersafari.com/11/8/7nhSK8.jpeg",
+      "https://e1.pxfuel.com/desktop-wallpaper/620/327/desktop-wallpaper-sonic-the-hedgehog-2-video-game-hq-sonic-the-hedgehog-2-sonic-2.jpg",
+      "https://media.sketchfab.com/models/c297f03f1030469ea5ead517263e5469/thumbnails/b83b5b3f2ead4297af15dfc14a0def28/299a6eb1ad7745c096349e8308759642.jpeg"
     ];
 
 
     var play_time_options = [
-      "Last played 11 years ago",
-      "Last played 12 years ago",
-      "Last played 13 years ago",
-      "Last played 14 years ago",
-      "Last played 15 years ago",
-      "Last played 16 years ago",
-      "Last played 17 years ago",
-      "Last played 18 years ago",
-      "Last played 19 years ago",
-      "Last played 20 years ago",
-      "Last played 21 years ago",
-      "Last played 22 years ago"
+      "Running on Playstation",
+      "Running on Playstation",
+      "Running on Playstation",
+      "Running on Playstation",
+      "Running on GameBoy Advance",
+      "Running on SEGA",
+      "Running on Arcade",
+      "Running on Playstation",
+      "Running on Playstation",
+      "Running on Gameboy GBA",
+      "Running on Nintendo NES",
+      "Running on Nintendo NES"
     ];
 
     var game_name_options = [
       "Tekken 3",
       "Marvel vs Capcom - COSH",
       "Street Fighter II -SPECIAL",
-      "JoJo's Bizarre Adventure: HFTF",
+      "JoJo's Bizarre Adventure...",
       "Dragon Ball Z - Supersonic...",
-      "Dragon Ball Z - Buyuu Retsuden",
-      "Ghost of Tsushima",
-      "Assassin's Creed Valhalla",
-      "Metal Gear Solid V: The ...",
-      "Hitman 2",
-      "Red Dead Redemption 2",
-      "Sekiro: Shadows Die Twice"
+      "Dragon Ball Z - Buyuu...",
+      "The King of Fighters 2002",
+      "Crash Team Racing",
+      "Bloody Roar 2: Bringer of...",
+      "Contra (USA)",
+      "Sonic 2 Heroes",
+      "FIFA 99 (EU)"
     ];
 
     var last_checkpoint_image_options = [
@@ -611,8 +611,8 @@ startGameButton.addEventListener("click", () => {
 
       document.getElementById("game_bg").style.backgroundImage =
         "url(" + game_bg_options[i] + ")";
-      document.getElementById("game_play_time").innerHTML =
-        '<i class="fac fa-ps5"></i>' + "&nbsp" + play_time_options[i];
+        document.getElementById("game_play_time").innerHTML =
+        '<i class="fa fa-gamepad fa-lg"></i>' + "&nbsp" + play_time_options[i];    
       document.getElementById("game_name").innerHTML = game_name_options[i];
       document.getElementById("last_checkpoint_img").src =
         last_checkpoint_image_options[i];
