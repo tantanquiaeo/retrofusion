@@ -1,101 +1,47 @@
-//-------------------------------------------------------the loading intro
 const ps5_intro = document.getElementById("ps5_intro");
 const controller_container = document.getElementById("controller_container");
 const intro_info = document.getElementById("intro_info");
 const playstation = document.getElementById("playstation");
-const initial_logo = document.getElementById("initial_logo");
 const ps5_ui = document.getElementById("ps5_ui");
 
-ps5_intro.style.display = "flex";
-initial_logo.style.display = "flex";
+// Initially hide unnecessary elements
 controller_container.style.display = "none";
 intro_info.style.display = "none";
-
-setTimeout(() => {
-  ps5_intro.style.display = "grid";
-  initial_logo.style.display = "none";
-  controller_container.style.display = "flex";
-  intro_info.style.display = "flex";
-  controller_container.classList.add("opacity");
-  intro_info.classList.add("opacity");
-
-  setTimeout(() => {
-    controller_container.classList.remove("opacity");
-    intro_info.classList.remove("opacity");
-  }, 2000);
-}, 3000);
-
 ps5_ui.style.display = "none";
 
+// Display the "ps5_intro" section
+ps5_intro.style.display = "flex";
+
+// Directly load content after a brief delay
 setTimeout(() => {
-  playstation.style.pointerEvents = "auto";
-}, 3000);
+  // Remove the intro elements
+  ps5_intro.style.display = "none";
 
-$("#playstation").click(function () {
-  $(".intro_info").addClass("intro_info_hide_anim");
-  $(".controller_container").addClass("controller_container_hide_anim");
-
+  // Display the content
+  controller_container.style.display = "flex";
+  intro_info.style.display = "flex";
+  ps5_ui.style.display = "flex"; // Display the UI
+  
+  // Apply class animations to specific elements
+  $(".games_list").addClass("games_list_anim");
+  $("#game_bg").addClass("game_bg_anim");
+  $(".white_rect").addClass("white_rect_anim");
+  $("#game_play_time").addClass("game_play_time_anim");
+  $("#game_name").addClass("game_name_anim");
+  $(".game_start_button").addClass("game_start_button_anim");
+  // ... Add more animations here
+  
+  // Remove class animations after a delay
   setTimeout(() => {
-    $(".intro_info").removeClass("intro_info_hide_anim");
-    $(".controller_container").removeClass("controller_container_hide_anim");
-    intro_info.style.visibility = "hidden";
-    controller_container.style.visibility = "hidden";
-
-    ps5_intro.style.display = "none";
-    ps5_intro.style.visibility = "hidden";
-    ps5_intro.style.width = "0";
-    ps5_intro.style.height = "0";
-    ps5_ui.style.display = "flex";
-
-    $(".games_list").addClass("games_list_anim");
-    $("#game_bg").addClass("game_bg_anim");
-    $(".white_rect").addClass("white_rect_anim");
-    $("#game_play_time").addClass("game_play_time_anim");
-    $("#game_name").addClass("game_name_anim");
-    $(".game_start_button").addClass("game_start_button_anim");
-    $("#last_checkpoint_img").addClass("last_checkpoint_img_anim");
-    $("#last_checkpoint_text").addClass("last_checkpoint_text_anim");
-    $("#last_checkpoint_name").addClass("last_checkpoint_name_anim");
-    $("#last_checkpoint_time").addClass("last_checkpoint_time_anim");
-    $("#last_trophy_img").addClass("last_trophy_img_anim");
-    $("#last_trophy_text").addClass("last_trophy_text_anim");
-    $("#last_trophy_name").addClass("last_trophy_name_anim");
-    $("#last_trophy_time").addClass("last_trophy_time_anim");
-    $("#top_trophy_img").addClass("top_trophy_img_anim");
-    $("#top_trophy_text").addClass("top_trophy_text_anim");
-    $("#top_trophy_name").addClass("top_trophy_name_anim");
-    $("#top_trophy_time").addClass("top_trophy_time_anim");
-    $("#all_trophies_img").addClass("all_trophies_img_anim");
-    $("#all_trophies_text").addClass("all_trophies_text_anim");
-    $("#all_trophies_numbers").addClass("all_trophies_numbers_anim");
-    $(".notification_text").addClass("notification_text_anim");
-
-    setTimeout(() => {
-      $(".games_list").removeClass("games_list_anim");
-      $("#game_bg").removeClass("game_bg_anim");
-      $(".white_rect").removeClass("white_rect_anim");
-      $("#game_play_time").removeClass("game_play_time_anim");
-      $("#game_name").removeClass("game_name_anim");
-      $(".game_start_button").removeClass("game_start_button_anim");
-      $("#last_checkpoint_img").removeClass("last_checkpoint_img_anim");
-      $("#last_checkpoint_text").removeClass("last_checkpoint_text_anim");
-      $("#last_checkpoint_name").removeClass("last_checkpoint_name_anim");
-      $("#last_checkpoint_time").removeClass("last_checkpoint_time_anim");
-      $("#last_trophy_img").removeClass("last_trophy_img_anim");
-      $("#last_trophy_text").removeClass("last_trophy_text_anim");
-      $("#last_trophy_name").removeClass("last_trophy_name_anim");
-      $("#last_trophy_time").removeClass("last_trophy_time_anim");
-      $("#top_trophy_img").removeClass("top_trophy_img_anim");
-      $("#top_trophy_text").removeClass("top_trophy_text_anim");
-      $("#top_trophy_name").removeClass("top_trophy_name_anim");
-      $("#top_trophy_time").removeClass("top_trophy_time_anim");
-      $("#all_trophies_img").removeClass("all_trophies_img_anim");
-      $("#all_trophies_text").removeClass("all_trophies_text_anim");
-      $("#all_trophies_numbers").removeClass("all_trophies_numbers_anim");
-      $(".notification_text").removeClass("notification_text_anim");
-    }, 600);
-  }, 1000);
-});
+    $(".games_list").removeClass("games_list_anim");
+    $("#game_bg").removeClass("game_bg_anim");
+    $(".white_rect").removeClass("white_rect_anim");
+    $("#game_play_time").removeClass("game_play_time_anim");
+    $("#game_name").removeClass("game_name_anim");
+    $(".game_start_button").removeClass("game_start_button_anim");
+    // ... Remove more animations here
+  }, 600);
+}, 3000);
 
 //-------------------------------------------------------the actual interface
 //------------------show top tabs
@@ -419,9 +365,9 @@ startGameButton.addEventListener("click", () => {
     "https://www.retrogames.cc/embed/40238-tekken-3.html",
     "https://www.retrogames.cc/embed/9123-marvel-vs-capcom-clash-of-super-heroes-980123-usa.html",
     "https://www.retrogames.cc/embed/10042-street-fighter-ii-champion-edition-yyc-bootleg-set-2-920313-etc-bootleg.html",
-    "https://www.retrogames.cc/embed/9123-marvel-vs-capcom-clash-of-super-heroes-980123-usa.html",
-    "https://www.retrogames.cc/embed/40238-tekken-3.html",
-    "https://www.retrogames.cc/embed/9123-marvel-vs-capcom-clash-of-super-heroes-980123-usa.html",
+    "https://www.retrogames.cc/embed/8843-jojos-bizarre-adventure%3A-heritage-for-the-future-jojo-no-kimyou-na-bouken%3A-mirai-e-no-isan-japan-990927-no-cd.html",
+    "https://www.retrogames.cc/embed/19537-dragonball-z-supersonic-warriors-e-rising-sun.html",
+    "https://www.retrogames.cc/embed/16913-dragon-ball-z-buyuu-retsuden-japan.html",
     "https://www.retrogames.cc/embed/40238-tekken-3.html",
     "https://www.retrogames.cc/embed/9123-marvel-vs-capcom-clash-of-super-heroes-980123-usa.html",
     "https://www.retrogames.cc/embed/40238-tekken-3.html",
@@ -459,9 +405,9 @@ startGameButton.addEventListener("click", () => {
       "https://images6.alphacoders.com/650/thumb-1920-650796.jpg",
       "https://c4.wallpaperflare.com/wallpaper/366/517/192/video-game-marvel-vs-capcom-2-wallpaper-preview.jpg",
       "https://www.akibagamers.it/wp-content/uploads/2023/04/street-fighter-2-mega-drive-cover.jpg",
-      "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/horizon-bg2.jpg",
-      "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/dthstr-bg.jpg",
-      "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/spid-bg.jpg",
+      "https://pbs.twimg.com/media/D5uhMxgWwAAow5n.jpg",
+      "https://assets.altarofgaming.com/wp-content/uploads/2023/03/dragon-ball-z-supersonic-warriors-game-cover-altar-of-gaming.jpg",
+      "https://freegametips.com/wp-content/uploads/2019/11/Dragon-Ball-Super-Butoden-2-vs-Buyu-Retsuden-25-years.jpg",
       "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/tsus-bg.jpg",
       "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/ass-bg.jpg",
       "https://raw.githubusercontent.com/maxym11/ps5-ui-assets/master/PS5%20Backgrounds/mgs5-bg.jpg",
@@ -491,8 +437,8 @@ startGameButton.addEventListener("click", () => {
       "Marvel vs Capcom - COSH",
       "Street Fighter II -SPECIAL",
       "JoJo's Bizarre Adventure: HFTF",
-      "Death Stranding",
-      "Marvel's Spider-Man",
+      "Dragon Ball Z - Supersonic...",
+      "Dragon Ball Z - Buyuu Retsuden",
       "Ghost of Tsushima",
       "Assassin's Creed Valhalla",
       "Metal Gear Solid V: The ...",
